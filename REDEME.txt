@@ -14,8 +14,8 @@ kubectl create secret docker-registry aliyun-registry-secret \
 
 #https://docs.github.com/zh/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#%E5%9C%A8%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8A%E4%BD%BF%E7%94%A8-personal-access-token
 # 为 GitHub 仓库创建 Secret（使用个人访问令牌）
-kubectl create secret generic basic-auth-secret \ 
-    -n fleet-default \
+kubectl create secret generic github-secret \ 
+    -n fleet-local \
     --type=kubernetes.io/basic-auth \
     --from-literal=username=$user \
     --from-literal=password=$pat
