@@ -14,4 +14,4 @@ spec:
   imageScanCommit:
     authorName: Fleet Bot
     authorEmail: bot@kodyssss.com
-    messageTemplate: "Auto-update python-demo image to {{.ImageTag}}"
+    messageTemplate: "update image"
