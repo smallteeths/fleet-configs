@@ -9,7 +9,7 @@ spec:
   paths:
   - kustomize
   - kustomize/fleet.yaml
-  imageScanInterval: 5m # 与 imageScans 的 interval 一致
+  imageScanInterval: 10s # 与 imageScans 的 interval 一致
   clientSecretName: github-secret # GitHub 仓库的写权限密钥
   imageScanCommit:
     authorName: Fleet Bot
