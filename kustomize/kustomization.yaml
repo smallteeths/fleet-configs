@@ -13,8 +13,3 @@ commonLabels:
 resources:
   - deployment.yaml
   - service.yaml
-
-# 可选：为镜像添加前缀或标签
-images:
-  - name: registry.cn-shanghai.aliyuncs.com/kody_poc/fleet-python.demo
-    newTag: 1.0.0 # 初始标签，Image Scan 会动态更新
