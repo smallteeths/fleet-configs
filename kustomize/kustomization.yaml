@@ -1,3 +1,20 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+# 指定命名空间
+namespace: default
+
+# 公共标签，应用于所有资源
+commonLabels:
+  app: python-demo
+  environment: production
+
+# 引用资源文件
 resources:
   - deployment.yaml
   - service.yaml
+
+# 可选：为镜像添加前缀或标签
+images:
+  - name: registry.cn-shanghai.aliyuncs.com/kody_poc/fleet-python.demo
+    newTag: v1 # 初始标签，Image Scan 会动态更新
