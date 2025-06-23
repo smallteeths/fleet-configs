@@ -1,0 +1,6 @@
+直接运行./demo_web.py 即可看到5000端口暴露一个web UI ，修改templates中index.html文件中的版本信息离开测试不同的tag.
+
+docker build -t my-demo-web:v1 .
+
+docker run -p 5001:5000 my-demo-web:v1
+
