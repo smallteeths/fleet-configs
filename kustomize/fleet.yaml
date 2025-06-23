@@ -1,0 +1,9 @@
+imageScans:
+  - policy:
+      semver:
+        range: ">=1.0.0" # 选择 1.0.0 或更高版本的稳定版本
+    image: "registry.cn-shanghai.aliyuncs.com/kody_poc/fleet-python-demo"
+    tagName: python-demo-scan
+    interval: 5m # 每 5 分钟扫描一次
+    secretRef:
+      name: aliyun-registry-secret # 用于访问阿里云镜像仓库的密钥
