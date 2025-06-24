@@ -1,0 +1,11 @@
+# fleet.yaml
+namespace: fleet-system
+
+# 通过 label 选择要下发的集群，Rancher 中要先给目标集群打上相应的 label
+clusterSelector:
+  matchLabels:
+    environment: dev
+
+# resources 可以是单个文件、目录，或 Helm chart
+resources:
+  - ./apps
