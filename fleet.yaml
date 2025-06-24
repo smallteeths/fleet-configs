@@ -1,23 +1,18 @@
-# fleet.yaml
 namespace: fleet-system
-
-# 通过 label 选择要下发的集群，Rancher 中要先给目标集群打上相应的 label
 clusterSelector:
   matchLabels:
     environment: dev
-
-# resources 可以是单个文件、目录，或 Helm chart
 resources:
-  - ./apps
-
+  - name: apps        # 可任意命名，用于在 Fleet 事件和状态中引用
+    path: ./apps      # 指向 Git 仓库中的目录或文件
 imageScans:
-  - policy:
+  - image: "54.238.34.58.sslip.io:5000/my-image"
+    tagName: test-scan
+    secretRef:
+      name: dockerhub-secret
+    interval: 5m
+    policy:
       semver:
         range: "*"           # 按 semver 规则选最新
       alphabetical:
         order: asc           # 同名镜像按字母序升序
-    image: "54.238.34.58.sslip.io:5000/my-image"
-    tagName: test-scan       # 这个名字必须在同一个 bundle 唯一
-    secretRef:               # 用来拉私有 Registry 的凭证
-      name: dockerhub-secret # ← 下面第 3 步创建的 secret 名称
-    interval: 5m             # 每 5 分钟扫描一次
