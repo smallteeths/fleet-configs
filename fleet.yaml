@@ -3,16 +3,14 @@ clusterSelector:
   matchLabels:
     environment: dev
 resources:
-  - name: apps        # 可任意命名，用于在 Fleet 事件和状态中引用
-    path: ./apps      # 指向 Git 仓库中的目录或文件
+  - name: apps
+    path: ./apps
 imageScans:
   - image: "54.238.34.58.sslip.io:5000/my-image"
     tagName: test-scan
-    secretRef:
-      name: dockerhub-secret
     interval: 5m
     policy:
       semver:
-        range: "*"           # 按 semver 规则选最新
+        range: "*"
       alphabetical:
-        order: asc           # 同名镜像按字母序升序
+        order: asc
