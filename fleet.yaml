@@ -9,3 +9,15 @@ clusterSelector:
 # resources 可以是单个文件、目录，或 Helm chart
 resources:
   - ./apps
+
+imageScans:
+  - policy:
+      semver:
+        range: "*"           # 按 semver 规则选最新
+      alphabetical:
+        order: asc           # 同名镜像按字母序升序
+    image: "54.238.34.58.sslip.io:5000/my-image"
+    tagName: test-scan       # 这个名字必须在同一个 bundle 唯一
+    secretRef:               # 用来拉私有 Registry 的凭证
+      name: dockerhub-secret # ← 下面第 3 步创建的 secret 名称
+    interval: 5m             # 每 5 分钟扫描一次
