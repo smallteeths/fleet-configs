@@ -5,7 +5,5 @@ imageScans:
     image: "harbor.rancher.com/kody_poc/fleet-python.demo"
     tagName: python-demo-scan
     interval: 10s # 每 5 分钟扫描一次
-    caBundleRef:
-      name: harbor-ca-bundle
     secretRef:
       name: aliyun-registry-secret # 用于访问阿里云镜像仓库的密钥

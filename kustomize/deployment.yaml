@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: python-demo
-        image: harbor.rancher.com/kody_poc/fleet-python.demo:2.0.0 # {"$imagescan": "python-demo-scan"}
+        image: harbor.rancher.com/kody_poc/fleet-python.demo:1.0.0 # {"$imagescan": "python-demo-scan"}
         ports:
         - containerPort: 8000
         resources:
