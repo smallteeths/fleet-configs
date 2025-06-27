@@ -1,0 +1,13 @@
+namespace: default
+resources:
+  - name: apps
+    path: ./apps
+imageScans:
+  - image: "3.113.20.47.sslip.io:5000/rancher/nginx"
+    tagName: test-scan
+    interval: 20s
+    policy:
+      semver:
+        range: "*"
+      alphabetical:
+        order: asc
