@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: python-demo
-        image: registry.cn-shanghai.aliyuncs.com/kody_poc/fleet-python.demo:1.0.0 # {"$imagescan": "python-demo-scan"}
+        image: 3.113.20.47.sslip.io:5000/rancher/nginx:1.26.0 # {"$imagescan": "python-demo-scan"}
         ports:
         - containerPort: 8000
         resources:
