@@ -6,13 +6,11 @@ resources:
   - name: apps
     path: ./apps
 imageScans:
-  - image: "54.238.34.58.sslip.io:5000/my-image"
+  - image: "54.238.34.58.sslip.io:5000"
     tagName: test-scan
-    interval: 5m
+    interval: 20s
     policy:
       semver:
         range: "*"
       alphabetical:
         order: asc
-    caBundleRef:
-      name: my-registry-ca
