@@ -1,4 +1,4 @@
-namespace: default
+namespace: fleet-system
 resources:
   - name: apps
     path: ./apps
