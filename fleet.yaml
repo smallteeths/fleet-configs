@@ -6,7 +6,7 @@ resources:
   - name: apps
     path: ./apps
 imageScans:
-  - image: "54.238.34.58.sslip.io:5000"
+  - image: "3.113.20.47.sslip.io"
     tagName: test-scan
     interval: 20s
     policy:
