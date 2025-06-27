@@ -11,5 +11,5 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: nginx:1.23.4
+        image: 3.113.20.47.sslip.io:5000/nginx:1.26.0
         ports: [{ containerPort: 80 }]
