@@ -12,3 +12,9 @@ imageScans:
         range: "*"
       alphabetical:
         order: asc
+    commit:
+      enabled: true
+      author:
+        name: fleet-bot
+        email: 503630985@qq.com
+      messageTemplate: "🔄 Update nginx image to {{ .Image }}"
