@@ -2,7 +2,6 @@ apiVersion: fleet.cattle.io/v1alpha1
 kind: GitRepo
 metadata:
   name: python-demo-repo
-  namespace: fleet-local
 spec:
   repo: https://github.com/kodyssss/python_demo.git
   branch: main
