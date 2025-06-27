@@ -1,7 +1,5 @@
 namespace: fleet-system
 clusterSelector:
-  matchLabels:
-    environment: dev
 resources:
   - name: apps
     path: ./apps
