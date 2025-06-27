@@ -1,7 +1,8 @@
 imageScans:
   - policy:
       semver:
-        range: ">=1.0.0" # 选择 1.0.0 或更高版本的稳定版本
+        range: "*" # 选择 1.0.0 或更高版本的稳定版本
     image: "3.113.20.47.sslip.io:5000/rancher/nginx"
     tagName: python-demo-scan
     interval: 10s # 每 5 分钟扫描一次
+  
