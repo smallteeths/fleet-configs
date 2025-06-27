@@ -5,7 +5,7 @@ resources:
 imageScans:
   - image: "3.113.20.47.sslip.io:5000/rancher/nginx"
     tagName: test-scan
-    interval: 20s
+    interval: 10s
     policy:
       semver:
         range: "*"
