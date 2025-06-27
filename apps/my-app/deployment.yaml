@@ -5,11 +5,11 @@ metadata:
 spec:
   replicas: 2
   selector:
-    matchLabels: {app: my-app}
+    matchLabels: { app: my-app }
   template:
-    metadata: {labels: {app: my-app}}
+    metadata: { labels: { app: my-app } }
     spec:
       containers:
       - name: my-app
-        image: 3.113.20.47.sslip.io:5000/rancher/nginx:1.26.0 # {"$imagescan": "test-scan"}
-        ports: [{containerPort: 80}]
+        image: 3.113.20.47.sslip.io:5000/rancher/nginx:1.26.0  # {"$imagescan": "test-scan:tag"}
+        ports: [{ containerPort: 80 }]
