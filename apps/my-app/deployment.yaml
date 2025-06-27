@@ -11,5 +11,5 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: 1.26.2 # {"$imagescan": "test-scan:tag"}
+        image: 3.113.20.47.sslip.io:5000/rancher/nginx:1.26.0 # {"$imagescan": "test-scan"}
         ports: [{containerPort: 80}]
